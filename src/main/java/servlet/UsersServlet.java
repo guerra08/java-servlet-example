@@ -1,14 +1,18 @@
+package servlet;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import repository.UserRepository;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
-public class AppServlet extends HttpServlet {
+@WebServlet("/users")
+public class UsersServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String requestUrl = request.getRequestURI();

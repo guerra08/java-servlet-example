@@ -36,7 +36,7 @@ public class UserRepository {
     public String getStringOfAllUsers(){
         StringBuilder result = new StringBuilder();
         for (Map.Entry<Integer, String> entry : userStore.entrySet()){
-            result.append(entry.getKey()).append(" - ").append(entry.getValue()).append("\n");
+            result.append(entry.getKey()).append(" - ").append(entry.getValue()).append("; ");
         }
         return result.toString();
     }
