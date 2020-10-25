@@ -29,6 +29,10 @@ public class UserRepository {
         return userStore.getOrDefault(key, "#");
     }
 
+    public String deleteUser(Integer key){
+        return userStore.remove(key);
+    }
+
     public String getStringOfAllUsers(){
         StringBuilder result = new StringBuilder();
         for (Map.Entry<Integer, String> entry : userStore.entrySet()){
